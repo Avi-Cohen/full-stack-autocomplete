@@ -4,7 +4,12 @@
   "description": "autocomplete no external libraries for implementation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-client": "cd view && npm i",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "cd view && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -12,8 +17,13 @@
   },
   "author": "Avi Cohen",
   "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
   "bugs": {
     "url": "https://github.com/Avi-Cohen/full-stack-autocomplete/issues"
   },
-  "homepage": "https://github.com/Avi-Cohen/full-stack-autocomplete#readme"
+  "homepage": ""
 }
