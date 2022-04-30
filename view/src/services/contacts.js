@@ -13,7 +13,7 @@ async function getEmailsList(debouncedTerm) {
     });
     return data.length > 0 ? data.map((contact) => contact.email) : [];
   } catch (e) {
-    console.log(e.stack);
+    console.error(e.stack);
   }
 }
 const contactsService = {

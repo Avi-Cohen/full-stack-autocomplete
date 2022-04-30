@@ -7,7 +7,7 @@ module.exports = (app) => {
       );
       res.send(contacts);
     } catch (e) {
-      console.log(e.message);
+      console.error(e.message);
       res.send(e.message);
     }
   });

@@ -7,10 +7,6 @@ const PORT = process.env.PORT || 5001;
 
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("<h1>contacts-rest-api</h1>");
-});
-
 apiController(app);
 
-app.listen(PORT,()=>console.log('running'));
+app.listen(PORT, () => console.log("running on port#: ", PORT));
